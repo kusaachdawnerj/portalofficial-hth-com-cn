@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 - 持续关注 · 轻松再访</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: linear-gradient(145deg, #fde8cd 0%, #fbc9a6 50%, #f7b283 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #3e2c1a;
+            line-height: 1.7;
+            padding: 0 20px;
+        }
+
+        .page-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0 16px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .site-name {
+            font-size: 1.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background: #ffffffcc;
+            padding: 6px 18px;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: #4d3420;
+            text-decoration: none;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #a5622e;
+            color: #7e4a22;
+        }
+
+        /* hero */
+        .hero {
+            margin: 32px 0 28px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 32px;
+            padding: 44px 40px 40px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: #2e1f0f;
+        }
+
+        .hero p {
+            font-size: 1.12rem;
+            max-width: 700px;
+            color: #4f3824;
+            margin-bottom: 16px;
+        }
+
+        .hero .highlight-link {
+            background: #fff4ea;
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 12px;
+            box-shadow: 0 4px 12px rgba(200, 130, 60, 0.15);
+            transition: background 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(160, 90, 40, 0.2);
+        }
+
+        .hero .highlight-link a {
+            text-decoration: none;
+            color: #7a4b26;
+        }
+
+        .hero .highlight-link:hover {
+            background: #ffe7d5;
+            box-shadow: 0 6px 18px rgba(170, 100, 40, 0.18);
+        }
+
+        /* 三场景卡片 */
+        .scenes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+
+        .scene-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+            border-radius: 28px;
+            padding: 28px 22px 26px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.02);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+
+        .scene-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .scene-card .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .scene-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2e1f0f;
+        }
+
+        .scene-card p {
+            font-size: 0.97rem;
+            color: #4f3a26;
+        }
+
+        /* 常见说明 */
+        .faq-section {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(4px);
+            border-radius: 32px;
+            padding: 32px 36px;
+            margin-bottom: 32px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.02);
+        }
+
+        .faq-section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2e1f0f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item {
+            margin-bottom: 18px;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            font-size: 1.04rem;
+            color: #3f2b19;
+            margin-bottom: 4px;
+        }
+
+        .faq-item .a {
+            font-size: 0.98rem;
+            color: #4f3925;
+            padding-left: 6px;
+            border-left: 3px solid #dba77b;
+            padding-left: 16px;
+        }
+
+        .faq-item .a a {
+            color: #7a4b26;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #c58d62;
+        }
+
+        .faq-item .a a:hover {
+            color: #a05f2e;
+            text-decoration-color: #a05f2e;
+        }
+
+        /* 底部 */
+        .footer-note {
+            text-align: center;
+            padding: 24px 0 32px;
+            font-size: 0.9rem;
+            color: #5f4530;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            margin-top: 12px;
+        }
+
+        .footer-note a {
+            color: #5f3f29;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .footer-note a:hover {
+            color: #8a5b34;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .hero {
+                padding: 30px 24px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .scenes {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .faq-section {
+                padding: 24px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0 12px;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .site-name {
+                font-size: 1.4rem;
+                padding: 4px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- 导航 -->
+    <nav class="top-nav">
+        <span class="site-name">华体会</span>
+        <div class="nav-links">
+            <a href="#">再次访问</a>
+            <a href="#">收藏备忘</a>
+            <a href="#">持续关注</a>
+        </div>
+    </nav>
+
+    <!-- Hero 再次访问 + 收藏视角 -->
+    <section class="hero">
+        <h1>再次访问 · 收藏 · 持续关注</h1>
+        <p>如果你曾来过这里，大概还记得它的简洁与直接。把 <a href="https://portalofficial-hth.com.cn" style="color:#7a4b26; text-decoration: underline; text-underline-offset:3px;">华体会</a> 放到浏览器书签里，或者记下这个地址——下次想回来的时候，就不用再翻聊天记录或者搜索了。</p>
+        <p>无论是想快速回顾某个内容，还是习惯性打开看看有没有新动态，一个稳定的入口会让整个过程更省心。对自己说一句“先收藏”，往往比临时找要靠谱得多。</p>
+        <div class="highlight-link">
+            <a href="https://portalofficial-hth.com.cn">华体会</a> — 随时可回
+        </div>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section class="scenes">
+        <div class="scene-card">
+            <span class="icon">📑</span>
+            <h3>再次访问</h3>
+            <p>隔了一段时间想回来看看？直接打开书签或输入熟悉的链接。无需重新适应界面，页面结构稳定，内容组织清晰，让人很快就能找到之前看过的部分。</p>
+        </div>
+        <div class="scene-card">
+            <span class="icon">⭐</span>
+            <h3>收藏备用</h3>
+            <p>把地址收藏到浏览器或笔记里，下次要用时一键直达。收藏夹里的 <a href="https://portalofficial-hth.com.cn" style="color:#7a4b26; text-decoration: underline; text-underline-offset:3px;">华体会</a> 就像一张便利贴，提醒你这里有个整理好的信息源。</p>
+        </div>
+        <div class="scene-card">
+            <span class="icon">🔄</span>
+            <h3>持续关注</h3>
+            <p>如果你对它保持兴趣，不妨隔段时间回来看看。页面内容会随着时间更新和补充，但你熟悉的入口始终不变。关注本身不需要太多仪式感，记得就好。</p>
+        </div>
+    </section>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <section class="faq-section">
+        <h2>📌 常见说明</h2>
+        <div class="faq-item">
+            <div class="q">Q：这个网站主要提供什么？</div>
+            <div class="a">它是一个信息整理与展示页面，围绕 <a href="https://portalofficial-hth.com.cn">华体会</a> 相关内容展开，结构清晰，适合反复查阅。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q：如何最快回到这里？</div>
+            <div class="a">建议把 <a href="https://portalofficial-hth.com.cn">华体会</a> 添加到浏览器书签栏，或者用手机浏览器收藏。也可以记下域名，手动输入也不麻烦。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q：内容会不会经常变？</div>
+            <div class="a">页面会保持核心内容的稳定，同时根据实际需要做适度补充。你每次回来看到的基本框架是熟悉的，细节上可能会有优化。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q：需要注册或登录吗？</div>
+            <div class="a">不需要。直接打开页面即可浏览，完全公开，省去繁琐步骤。这也是推荐你收藏的原因之一——打开即用。</div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer-note">
+        <span>入口稳定 · <a href="https://portalofficial-hth.com.cn">华体会</a> · 可收藏</span><br>
+        <span style="opacity:0.7; font-size:0.85rem;">内容整理于日常更新 · 保持简洁</span>
+    </footer>
+
+</div>
+</body>
+</html>

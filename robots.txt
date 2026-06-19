@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kusaachdawnerj.github.io/portalofficial-hth-com-cn/sitemap.xml
