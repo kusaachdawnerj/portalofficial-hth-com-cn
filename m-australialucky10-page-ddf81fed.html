@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于澳洲幸运10 – 站点介绍与可信说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f8;
+            color: #2c2b2a;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 760px;
+            width: 100%;
+            background: white;
+            border-radius: 28px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.3s;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            color: #1e1d1b;
+            margin-bottom: 0.25rem;
+            border-left: 5px solid #c7b5a0;
+            padding-left: 1.1rem;
+        }
+
+        .subhead {
+            color: #7b7a78;
+            font-size: 0.95rem;
+            margin-bottom: 2.2rem;
+            margin-top: 0.1rem;
+            padding-left: 1.6rem;
+            border-bottom: 1px solid #ededeb;
+            padding-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 520;
+            color: #2e2c2a;
+            margin: 2rem 0 0.8rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px dashed #dad8d4;
+            display: inline-block;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0.5rem;
+        }
+
+        p {
+            color: #3b3a38;
+            margin-bottom: 1.1rem;
+            font-size: 1rem;
+        }
+
+        a {
+            color: #6b5d4e;
+            text-decoration: none;
+            border-bottom: 1px dotted #c2b6a8;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 480;
+        }
+
+        a:hover,
+        a:focus {
+            color: #3e352c;
+            border-bottom: 1px solid #8c7b66;
+        }
+
+        .directory-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.2rem;
+            margin: 1.4rem 0 1rem 0;
+            padding: 1.2rem 1.2rem 1rem 1.2rem;
+            background: #f7f5f2;
+            border-radius: 20px;
+            list-style: none;
+        }
+
+        .directory-grid li {
+            flex: 1 1 160px;
+            font-size: 0.95rem;
+            color: #3e3c3a;
+            padding: 0.2rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.3rem;
+        }
+
+        .directory-grid li::before {
+            content: "▹";
+            color: #b5a48f;
+            font-size: 1.1rem;
+            margin-right: 0.3rem;
+        }
+
+        .info-card {
+            background: #fcfbfa;
+            border-radius: 18px;
+            padding: 1.3rem 1.5rem;
+            margin: 1.8rem 0 1.2rem 0;
+            border: 1px solid #edeae6;
+        }
+
+        .info-card p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .notice-area {
+            background: #f3f0ec;
+            border-radius: 18px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0;
+            font-size: 0.95rem;
+            border-left: 4px solid #c7b29b;
+        }
+
+        .notice-area strong {
+            color: #3a322b;
+            font-weight: 530;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 1rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #efede9;
+        }
+
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 520;
+            color: #2f2c29;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            color: #565451;
+            font-size: 0.95rem;
+            padding-left: 0.4rem;
+        }
+
+        .dot-sep {
+            color: #b9b4ae;
+            margin: 0 0.3rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eae6e0;
+            color: #4b443c;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e6e2dc;
+            margin: 1.8rem 0 0.8rem 0;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #888580;
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid #efede9;
+            padding-top: 1.2rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+
+            .page {
+                padding: 1.8rem 1.2rem;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                padding-left: 0.8rem;
+            }
+
+            .subhead {
+                padding-left: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .directory-grid {
+                flex-direction: column;
+                gap: 0.3rem;
+                padding: 1rem;
+            }
+
+            .directory-grid li {
+                flex: 1 1 100%;
+            }
+
+            .info-card {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>关于澳洲幸运10</h1>
+    <div class="subhead">站点背景 · 内容说明 · 可信参考</div>
+
+    <p>「澳洲幸运10」是一个以信息整理与知识介绍为主的站点，主要面向希望了解该彩种玩法规则、开奖机制以及相关背景的用户。站内内容基于公开资料与行业常识进行汇编，力求条理清晰、表述平实，不渲染不引导，仅作为了解与参考的窗口。</p>
+
+    <p>本页围绕该站的核心定位，整合了目录索引、说明提示及常见问题摘要，帮助新老用户快速判断内容方向与使用方式。如果你正在寻找一个结构化的信息落脚点，<a href="https://m-australialucky10.com">澳洲幸运10</a> 提供的资料或许能为你节省不少自行检索的时间。</p>
+
+    <!-- 目录感布局：知识库入口 -->
+    <h2 class="section-title">📋 内容速览</h2>
+    <ul class="directory-grid">
+        <li>玩法类型与规则简述</li>
+        <li>开奖频率 &amp; 时间参考</li>
+        <li>历史结果查询方式</li>
+        <li>常见术语释义</li>
+        <li>相关概率与组合说明</li>
+        <li>平台介绍与使用建议</li>
+    </ul>
+
+    <!-- 说明区 -->
+    <div class="info-card">
+        <h3 style="font-weight: 530; font-size: 1.1rem; margin-bottom: 0.4rem; color: #2d2a27;">📌 站点说明</h3>
+        <p>本站内容均以客观整理为原则，不包含任何诱导性表述、虚假承诺或预测服务。所有介绍均基于可查证的基础规则与常见问答结构。数据类内容仅作展示用途，实际开奖以官方机构公布为准。</p>
+        <p>如果你对某个具体规则或表述有疑问，建议直接参考站点内更详尽的分类文章，或结合其他官方信息交叉验证。信息本身是中立的，关键在于如何理解与使用。</p>
+    </div>
+
+    <!-- 提示区 -->
+    <div class="notice-area">
+        <strong>⚠️ 提示</strong>：任何形式的数字游戏都应当基于兴趣与了解，而非投机或过度投入。保持理性认知，设定合理预期，是健康参与的前提。本站不鼓励任何超出个人承受能力的行为。
+    </div>
+
+    <!-- 相关信息区 + FAQ 摘要 -->
+    <h2 class="section-title">❓ 常见疑问摘要</h2>
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">▸ 澳洲幸运10 和北京赛车有什么关联？</div>
+            <div class="faq-a">两者在玩法结构上有一定相似（如1-10选号、冠军/亚军等），但来自不同发行体系。站内对异同点有专门对比说明。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">▸ 如何查看往期开奖结果？</div>
+            <div class="faq-a">站点内设有历史数据专区，可按期号或日期筛选，数据更新频率与官方保持一致。注意：历史结果仅供回顾，不预示未来。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">▸ 网站是否需要注册或付费？</div>
+            <div class="faq-a">本站为纯信息展示页面，无需注册、登录或付费。所有内容均可直接浏览。部分外部链接请自行甄别。</div>
+        </div>
+    </div>
+
+    <!-- 额外信息：关键词标签 与 种子（不显示种子值）-->
+    <div style="margin: 1.6rem 0 0.4rem 0;">
+        <span class="tag">澳洲幸运10</span>
+        <span class="tag">玩法介绍</span>
+        <span class="tag">规则说明</span>
+        <span class="tag">开奖知识</span>
+        <span class="tag">信息整理</span>
+    </div>
+
+    <hr>
+
+    <p style="font-size: 0.95rem; color: #53514e;">如果你希望进一步了解玩法细节或查阅完整的介绍文章，可以直接浏览 <a href="https://m-australialucky10.com">澳洲幸运10</a> 站内的分类内容。从基础术语到进阶解读，页面都按照知识库的结构进行了整理，便于按需查阅。</p>
+
+    <div class="footer-note">
+        基于公开资料整理 · 仅供了解与参考<br>
+        理性参与 · 量力而行
+    </div>
+</div>
+</body>
+</html>
